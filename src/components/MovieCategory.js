@@ -1,14 +1,14 @@
 import styles from '../styles/movie.module.css'
 
 function MovieCategory({person}) {
-// console.log(person[0])
+console.log(person[0].Title)
     
 
   return (
         <>
         <div className={styles.movie}>
          
-            <p>Movie category name</p>
+            <p>{person[0].Title}</p>
             <div className={styles.categoryCon}>
               
               {person.map((item) => (
