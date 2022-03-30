@@ -11,6 +11,7 @@ function App() {
 
   const [inputValue, setInputValue] = useState(null);
   const [inputSearchValue, setInputSearchValue] = useState([]);
+  const [searchResult, setSearchResult] = useState([])
   const [loader, setLoader] = useState(true)
   
   
@@ -40,15 +41,16 @@ function App() {
           .then(res => {
             
 
-            // const found = res.data.find(item => {
-
-            // });
-            if ([res.data].indexOf(searchTerm) > -1) {
-             console.log("true")
-             setInputSearchValue(res.data)
-          } else {
-              console.log("false")
-          }
+      
+            let searchArr = res.data["Search"]
+          setSearchResult(searchArr)
+        //   let searchArr = res.data["Search"]
+        //   function searchStringInArray (searchTerm, searchArr) {
+        //     for (var j=0; j<searchArr.length; j++) {
+        //         if (searchArr[j].match(searchTerm)) console.log(j);
+        //     }
+        //     return -1;
+        // }
             
         })
   }
@@ -56,10 +58,17 @@ function App() {
 
  
   const onChangeHandler = (event) => {
-    setInputValue(event.target.value);
+
+    // setInputValue(event.target.value);
     console.log(event.target.value)
-    search(event)
+    let trimValue = event.target.value.trim()
+    setInputValue(trimValue)
+    // search(trimValue)
   };
+
+  const onClickFuc = () => {
+    search(inputValue)
+  }
 
  
   
@@ -70,7 +79,7 @@ function App() {
      <div>
       <Navbar />
       <Header />
-      <Search search={search} onChangeHandler={onChangeHandler} inputSearchValue={inputSearchValue} />
+      <Search search={search} onChangeHandler={onChangeHandler} inputSearchValue={inputSearchValue} onClickFuc={onClickFuc} searchResult={searchResult} />
       <MovieCategory person={person} loader={loader}  />
     </div>
     </>
