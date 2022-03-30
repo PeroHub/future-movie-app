@@ -42,7 +42,7 @@
         background: rgba(0, 0, 0, 1);
         border-radius: 10px;
         height: 300px;
-        display: flex;
+        display: inline-block;
         margin: 15px;
     }
 
