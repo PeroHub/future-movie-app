@@ -1,0 +1,26 @@
+.navbar {
+    background: #292929;
+    width: 100%;
+   
+}
+
+.navbarSub {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    .navbar {
+      
+    }
+
+    .navbarSub {
+        justify-content: flex-start;
+        padding: 54px 1187.3px 53.06px 96px;
+    }
+}

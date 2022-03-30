@@ -1,0 +1,50 @@
+.movie {
+    color:  rgba(0, 0, 0, 1);
+    padding-left: 35px;
+}
+
+.categoryBox {
+    width: 300px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+   height: 300px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.categoryCon {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+
+@media screen and (min-width: 800px) {
+    .movie {
+       
+        padding-left: 98px;
+    }
+
+    .categoryCon {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    }
+    
+    .categoryBox {
+        width: 300px;
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+        height: 300px;
+        display: flex;
+        margin: 15px;
+    }
+
+    
+}
