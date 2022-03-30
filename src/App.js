@@ -11,6 +11,7 @@ function App() {
 
   const [inputValue, setInputValue] = useState(null);
   const [inputSearchValue, setInputSearchValue] = useState([]);
+  const [loader, setLoader] = useState(true)
   
   
   
@@ -24,10 +25,11 @@ function App() {
      const initialValue = JSON.parse(saved)
      setPerson(initialValue)
      
+     setLoader(false)
 
       }).catch((error)=> {
       console.log(error);
-      
+      setLoader(false)
     })
   },[])
 
@@ -69,7 +71,7 @@ function App() {
       <Navbar />
       <Header />
       <Search search={search} onChangeHandler={onChangeHandler} inputSearchValue={inputSearchValue} />
-      <MovieCategory person={person}  />
+      <MovieCategory person={person} loader={loader}  />
     </div>
     </>
   );
