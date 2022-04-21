@@ -4,10 +4,10 @@
 }
 
 .categoryBox {
-    width: 300px;
+    width: 250px;
     background: rgba(0, 0, 0, 1);
     border-radius: 10px;
-   height: 300px;
+   height: 350px;
     display: inline-block;
     margin-right: 15px;
 }
@@ -16,7 +16,22 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    padding-bottom: 20px;
     }
+
+    .categoryCon::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+      }
+      
+      .categoryCon::-webkit-scrollbar-track {
+        background: #30333a;        /* color of the tracking area */
+      }
+      
+      .categoryCon::-webkit-scrollbar-thumb {
+        background-color: rgb(153, 146, 146);    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid #10141F;  /* creates padding around scroll thumb */
+      }
 
     .box {
         display: flex;
@@ -24,6 +39,8 @@
         align-items: center;
         height: inherit;
     }
+
+
 
 @media screen and (min-width: 800px) {
     .movie {
@@ -35,15 +52,20 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    border-radius: 50px;
+    
     }
+
+    
     
     .categoryBox {
-        width: 300px;
+        width: 350px;
         background: rgba(0, 0, 0, 1);
-        border-radius: 10px;
-        height: 300px;
+        border-radius: 50px;
+        height: 500px;
         display: inline-block;
         margin: 15px;
+       
     }
 
     

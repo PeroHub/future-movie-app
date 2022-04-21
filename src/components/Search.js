@@ -1,14 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import styles from '../styles/search.module.css'
 
-function Search({ onChangeHandler, inputSearchValue, onClickFuc, searchResult}) {
+function Search({ onChangeHandler, onClickFuc, searchResult}) {
 //  console.log(inputSearchValue.Search)
- const movieSearch = [inputSearchValue]
- movieSearch.map(item => {
-   console.log(item)
-   return item
- })
+//  const movieSearch = [inputSearchValue]
+//  movieSearch.map(item => {
+//    console.log(item)
+//    return item
+//  })
 
  console.log(searchResult)
   
@@ -20,7 +20,7 @@ function Search({ onChangeHandler, inputSearchValue, onClickFuc, searchResult}) 
            
        <div style={{display: "flex"}}>
        <input onChange={onChangeHandler} className={styles.searchInput} />
-       <button onClick={onClickFuc}>Search</button>
+       {/* <button onClick={onClickFuc}>Search</button> */}
        
        </div>
        {searchResult.map(result => (

@@ -16,10 +16,10 @@
     font-size: 30px;
     color: #fff;
     width: 40%;
-    line-height: 93.74px;
+    line-height: 63.74px;
     font-weight: bold;
-  
     text-align: center;
+    margin-top: 150px;
 }
 
 @media screen and (min-width: 800px) {
@@ -27,14 +27,16 @@
         justify-content: flex-start;
        width: 50%;
        padding: 80px;
+      
     }
 
     .headerpara {
        padding: 20px;
        width: 30%;
-       line-height: 94px;
+       line-height: 74px;
        font-size: 40px;
        text-align: left;
+       
       
     }
 }

@@ -1,6 +1,6 @@
 .navbar {
-    background: #292929;
     width: 100%;
+    position: absolute;
    
 }
 
@@ -21,6 +21,6 @@
 
     .navbarSub {
         justify-content: flex-start;
-        padding: 54px 1187.3px 53.06px 96px;
+        padding: 20px 1187.3px 53.06px 96px;
     }
 }
